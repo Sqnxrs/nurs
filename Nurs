@@ -1,0 +1,108 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+using namespace std;
+struct bolnica {
+	string A1;
+	string B1;
+	string information;
+	int aqsha;
+	int hours;
+	int minute;
+
+};
+
+void Darigerler() {
+	srand(time(NULL));
+	int h = rand() % 24;
+	int m = rand() % 60;
+	bolnica bl;
+	int choise;
+	bool q = false;
+	while (!q)
+	{
+		cout << "+tandanyz+\n";
+		cout << "1)- Qala ishsindegy taxi" << "\n";
+		cout << "2)- Qalaaralyq taxi" << "\n";
+		cout << "3)- Curier" << "\n";
+		cout << "4)- Qalaralyq Curier\n";
+		cout << "5)- EXIT\n";
+		cout << "=============\n";
+		cin >> choise;
+
+		switch (choise)
+		{
+		case 1:
+			cout << "Sizdin meken-jaiynyz: \n";
+			cin >> bl.A1;
+			cout << "kelu mekenjaiy: \n";
+			cin >> bl.B1;
+			cout << "Sapar ushin baga: \n";
+			cin >> bl.aqsha;
+			bl.hours = h;
+			bl.minute = m;
+			cout << "Sizge qanday oryn kerek?\n";
+			cin >> bl.information;
+			cout << endl;
+			cout << "taxi: " << bl.hours << ":" << bl.minute << "minutta keledy\n";
+
+			break;
+		case 2:
+			cout << "Siz turgan qala?\n";
+			cin >> bl.A1;
+			cout << "Siz baratyn qala?\n";
+			cin >> bl.B1;
+			cout << "Sapar ushin baga: \n";
+			cin >> bl.aqsha;
+			cout << "Shygu uaqyty sagat?\n";
+			cin >> bl.hours;
+			cout << "Minut?: \n";
+			cin >> bl.minute;
+			cout << "Tapsyrysqa tusiniktemeler: \n";
+			cin >> bl.information;
+			cout << "Jurgizushi sizge habarlasad kutiniz: ";
+
+
+				break;
+		case 3:
+			cout << "Sizdin meken-jaiynyz?\n";
+			cin >> bl.A1;
+			cout << "kelu mekenjaiy\n";
+			cin >> bl.B1;
+			cout << "Jetkizu aqysy: \n";
+			cin >> bl.aqsha;
+			bl.hours = h;
+			bl.minute = m;
+			cout << "Sizge ne beru kerek?\n";
+			cin >> bl.information;
+			cout << "Courier: " << bl.hours << ":" << bl.minute << "minutta keledy\n";
+			break;
+		case 4:
+			cout << "Siz turgan qala?\n";
+			cin >> bl.A1;
+			cout << "Paketti qai qalaga jetkizu kerek?\n";
+			cin >> bl.B1;
+			cout << "Sapar ushin baga: \n";
+			cin >> bl.aqsha;
+			cout << "Shygu uaqyty sagat?\n";
+			cin >> bl.hours;
+			cout << "Minut?: \n";
+			cin >> bl.minute;
+			cout << "Tapsyrysqa tusiniktemeler: \n";
+			cin >> bl.information;
+			cout << "Jurgizushi sizge habarlasad kutiniz: ";
+			break;
+		default:
+
+			break;
+		}
+	}
+}
+int main()
+{
+
+	bool d = false;
+	while (!d) {
+		Darigerler();
+	}
+}
